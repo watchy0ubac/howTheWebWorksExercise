@@ -1,0 +1,48 @@
+In your own terms, define the following terms:
+
+- What is HTTP?
+Standardized protocol for how web pages receive or get data from a server
+
+- What is a URL?
+An address for a resource on the internet
+
+- What is DNS?
+The system that understands a URL and uses that to find the IP of the server it's trying to access 
+
+- What is a query string?
+A string that allows you to pass key-value pairs into the URL
+
+- What are two HTTP verbs and how are they different?
+POST - Attempts to send data to a web server with new information, not simply pulling the information, but can be used to update a page or post a forum post etc
+
+- What is an HTTP request?
+Attempting to access a URL from a client using standard HTTP methods, like asked a server for the site information
+
+- What is an HTTP response?
+The server returning the requested information from an HTTP request, like returning the HTML code so that a browser can display the page's content
+
+- What is an HTTP header? Give a couple examples of request and response headers you have seen.
+Headers provide additional info about a request of response. An example would be Accept-Language or Accept for a request. And some examples of a response would be Content-Type or Last-Modified
+
+- What are the processes that happen when you type “http://somesite.com/some/page.html” into a browser?
+The DNS converts the URL somesite.com to an IP address that it can find. 
+The browser makes a get request to the IP including provided headers
+The server receives the information and sends a response back to the client with an appropriate status code
+The browser makes a DOM for the HTML received and looks for any other required resources like libraries, CSS, and Javascript
+The browser sends more HTTP requests for the other required resources and will then receive a response for each of them
+
+****Part Two: Practice Tools****
+
+1. Using ***curl***, make a ***GET*** request to the *icanhazdadjoke.com* API to find all jokes involving the word “pirate”
+$ curl https://icanhazdadjoke.com/search?term=pirate
+What does a pirate pay for his corn? A buccaneer!
+Why couldn't the kid see the pirate movie? Because it was rated arrr!
+What did the pirate say on his 80th birthday? Aye Matey!
+Why are pirates called pirates? Because they arrr!
+Why do pirates not know the alphabet? They always get stuck at "C".
+
+2. Use ***dig*** to find what the IP address is for *icanhazdadjoke.com*
+172.22.32.1
+
+3. Make a simple web page and serve it using ***python3 -m http.server***. Visit the page in a browser.
+Okay, I don't know how to put that into a text line, but I did that too. I prefer live server though, and use it for most projects already.
